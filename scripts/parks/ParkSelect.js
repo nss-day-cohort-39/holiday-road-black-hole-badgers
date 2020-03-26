@@ -22,11 +22,11 @@ export const parkSelect = () => {
     
 
   
-  const render = () => {
+  const render = (parksCollection) => {
     contentTarget.innerHTML = `
         <select class="parkDropdown" id="parkSelect">
         <option value="0">Please select a park!</option>
-        ${allParks.map(singlePark => {
+        ${parksCollection.map(singlePark => {
           return `<option>${singlePark.name}: ${singlePark.states}</option>`
         })
     }
