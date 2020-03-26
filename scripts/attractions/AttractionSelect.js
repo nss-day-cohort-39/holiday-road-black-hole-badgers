@@ -26,6 +26,6 @@ const AttractionSelect = () => {
             </select>
         `
     }
-    render(attractions)s
+    render(attractions)
 }
 export default AttractionSelect
