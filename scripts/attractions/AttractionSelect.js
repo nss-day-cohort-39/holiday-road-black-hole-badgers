@@ -21,9 +21,6 @@ const AttractionSelect = () => {
     const attractions = useAttractions()
 
 
-
-
-
     const render = (attractionsCollection) => {
         contentTarget.innerHTML = `
             <select class="dropdown" id="attractionSelect">
