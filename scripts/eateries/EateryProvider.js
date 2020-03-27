@@ -10,7 +10,18 @@ export const getEateries = () => {
         .then(response => response.json())
         .then(parsedEateries => {
             console.log(parsedEateries)
-            eatery = parsedEateries
+            eatery = parsedEateries.sort(function (Beginning, End) {
+                let nameA = Beginning.state
+                let nameB = End.state
+                if (nameA < nameB) {
+                    return -1
+                }
+                if (nameA > nameB) {
+                    return 1
+                }
+                return 0
+            }
+            )
         }
     )
 }

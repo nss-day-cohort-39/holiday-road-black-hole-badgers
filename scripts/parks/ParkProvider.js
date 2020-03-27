@@ -10,8 +10,18 @@ export const getParks = () => {
         .then(response => response.json())
         .then(
             parsedParks => {
-                parks = parsedParks.data
-                console.table(parks)
+                parks = parsedParks.data.sort(function (Beginning, End) {
+                    let nameA = Beginning.states
+                    let nameB = End.states
+                    if (nameA < nameB) {
+                        return -1
+                    }
+                    if (nameA > nameB) {
+                        return 1
+                    }
+                    return 0
+                }
+                )
             }
             )
         }
