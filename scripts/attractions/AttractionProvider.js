@@ -9,7 +9,18 @@ export const getAttractions = () => {
         .then(response => response.json())
         .then(parsedAttractions => {
             console.log(parsedAttractions)
-            attractions = parsedAttractions
+            attractions = parsedAttractions.sort(function (Beginning, End) {
+                let nameA = Beginning.state
+                let nameB = End.state
+                if (nameA < nameB) {
+                    return -1
+                }
+                if (nameA > nameB) {
+                    return 1
+                }
+                return 0
+            }
+            )
         }
     )
 }
