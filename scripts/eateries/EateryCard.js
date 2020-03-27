@@ -7,7 +7,6 @@ const eventHub = document.querySelector(".container")
 
 eventHub.addEventListener("eateryChosen", event => {
     const allEateries = useEatery()
-    console.log(allEateries)
     const theEatery = event.detail.eatery
     const chosenEatery = allEateries.find(
         (currentEatery) => {
