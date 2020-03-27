@@ -6,6 +6,7 @@ import { getEateries } from "./eateries/EateryProvider.js";
 import { eaterySelect } from "./eateries/EaterySelect.js";
 import { getWeather } from "./weather/WeatherProvider.js";
 import { weatherToDisplay } from "./weather/WeatherList.js";
+import  "./eateries/EateryCard.js";
 
 getAttractions()
     .then(AttractionSelect)
@@ -20,3 +21,18 @@ getWeather()
     .then(weatherToDisplay)
 
     
+
+
+
+getAttractions()
+    .then(AttractionSelect)
+    
+
+    
+getParks()
+    .then(parkSelect)
+    
+    
+getEateries()
+    .then(eaterySelect)
+
