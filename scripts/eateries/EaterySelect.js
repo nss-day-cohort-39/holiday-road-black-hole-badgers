@@ -19,13 +19,12 @@ contentTarget.addEventListener("change", changeEvent => {
 export const eaterySelect = () => {
   const allEateries = useEatery()
 
-  
   const render = (eateriesCollection) => {
     contentTarget.innerHTML = `
         <select class="eateryDropdown" id="eaterySelect">
         <option value="0">Please select a eatery!</option>
         ${eateriesCollection.map(singleEatery => {
-          return `<option>${singleEatery.businessName}: ${singleEatery.state}</option>`
+          return `<option value="${singleEatery.businessName}">${singleEatery.businessName}: ${singleEatery.state}</option>`
         })
     }
         </select>
