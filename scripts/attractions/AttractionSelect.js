@@ -2,7 +2,6 @@ import { useAttractions } from "./AttractionProvider.js"
 
 
 
-
 // Get a reference to the DOM element where the <select> will be rendered
 const contentTarget = document.querySelector(".attractionDropdown")
 const eventHub = document.querySelector(".container")
