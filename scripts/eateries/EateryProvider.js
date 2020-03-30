@@ -9,7 +9,7 @@ export const getEateries = () => {
     return fetch(`http://holidayroad.nss.team/eateries`)
         .then(response => response.json())
         .then(parsedEateries => {
-            eatery = parsedEateries.sort(function (Beginning, End) {
+            eatery = parsedEateries.sort((Beginning, End) => {
                 let nameA = Beginning.state
                 let nameB = End.state
                 if (nameA < nameB) {
