@@ -1,4 +1,4 @@
-export const eateryComponent = (eateryObj) => {
+export const eateryComponent = eateryObj => {
    return `
         <article class="eateryList">
             <h3 class="eateryName">${eateryObj.businessName}</h3>
