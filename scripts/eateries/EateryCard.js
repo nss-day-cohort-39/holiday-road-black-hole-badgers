@@ -1,5 +1,6 @@
 import { eateryComponent } from "./Eatery.js"
 import { useEatery } from "./EateryProvider.js"
+import { eateryDialogButton } from "./EateryDetailDialog.js"
 
 const contentTarget = document.querySelector(".itineraryEateryPreview")
 const eventHub = document.querySelector(".container")
@@ -21,4 +22,6 @@ eventHub.addEventListener("eateryChosen", event => {
 
 const render = (eatery) => {
     contentTarget.innerHTML = eateryComponent(eatery)
+
+    eateryDialogButton()
 }

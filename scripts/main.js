@@ -8,6 +8,8 @@ import { getWeather, useWeather } from "./weather/WeatherProvider.js"
 import  "./eateries/EateryCard.js"
 import { WeatherList } from "./weather/WeatherList.js"
 import "./attractions/AttractionCard.js"
+import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
+
 
 getAttractions()
     .then(AttractionSelect)
@@ -17,6 +19,7 @@ getParks()
 
 getEateries()
     .then(eaterySelect)
+    .then(eateryDialogButton)
 
 getWeather()
     .then(WeatherList)
