@@ -1,7 +1,8 @@
 export const Weather = (weatherObject) => {
     return `
-    <div class="weather">
-        <h4>${weatherObject.main.temp}</h4>
-    </div>
+    <article class="weather__card">
+        <section>Temperature: ${weatherObject.main.temp}°</section>
+        <section>Conditions: ${weatherObject.weather[0].main}</section>
+    </article>
     `
 }

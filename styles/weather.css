@@ -1,0 +1,11 @@
+.weather {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.weather__card {
+border: 1px solid gold;
+margin: .5rem .3rem;
+justify-content: space-evenly;
+}

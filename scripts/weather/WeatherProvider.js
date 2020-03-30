@@ -13,7 +13,7 @@ export const useWeather = () => {
 // Get weather data state from API
 
 export const getWeather = () => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=37643,us&units=imperial&appid=${settings.weatherKey}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=94016,us&units=imperial&appid=${settings.weatherKey}`)
         .then(response => response.json())
         .then(
             parsedWeather => {

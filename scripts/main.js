@@ -4,9 +4,10 @@ import { getAttractions } from "./attractions/AttractionProvider.js";
 import AttractionSelect from "./attractions/AttractionSelect.js";
 import { getEateries } from "./eateries/EateryProvider.js";
 import { eaterySelect } from "./eateries/EaterySelect.js";
-import { getWeather } from "./weather/WeatherProvider.js";
-import { weatherToDisplay } from "./weather/WeatherList.js";
+import { getWeather, useWeather } from "./weather/WeatherProvider.js";
 import  "./eateries/EateryCard.js";
+import { convertMilliseconds } from "./weather/WeatherFilter.js";
+import { WeatherList } from "./weather/WeatherList.js";
 
 getAttractions()
     .then(AttractionSelect)
@@ -18,21 +19,4 @@ getEateries()
     .then(eaterySelect)
 
 getWeather()
-    .then(weatherToDisplay)
-
-    
-
-
-
-getAttractions()
-    .then(AttractionSelect)
-    
-
-    
-getParks()
-    .then(parkSelect)
-    
-    
-getEateries()
-    .then(eaterySelect)
-
+    .then(WeatherList)
