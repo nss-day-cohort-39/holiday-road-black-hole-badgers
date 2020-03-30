@@ -6,7 +6,6 @@ import { getEateries } from "./eateries/EateryProvider.js";
 import { eaterySelect } from "./eateries/EaterySelect.js";
 import { getWeather, useWeather } from "./weather/WeatherProvider.js";
 import  "./eateries/EateryCard.js";
-import { convertMilliseconds } from "./weather/WeatherFilter.js";
 import { WeatherList } from "./weather/WeatherList.js";
 
 getAttractions()
