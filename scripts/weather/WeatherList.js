@@ -1,11 +1,26 @@
 import { getWeather, useWeather } from "./WeatherProvider.js"
 
 
-export const weatherToDisplay = () => {
-let allWeather = useWeather()
+export const DisplayWeather = () => {
+
+let weatherToDisplay = useWeather()
 debugger
-const FilteredWeather = allWeather.filter(weather => allWeather.dt_txt.endswith("12:00:00"))
-console.log(FilteredWeather)
+
+const weatherToDisplay = weatherToDisplay.filter(weather => {
+   if(weather.dt_txt.endswith("12:00:00")){
+       return true
+   }
+return false
+})
+render(weatherToDisplay)
+}
+
+const render = weatherToRender => {
+    contentTarget.innerHTML = weatherToRender.map(
+        (weatherObject) => {
+            return Weather(weatherObject)
+        }
+    ).join("")
 }
 
 // export const weatherToDisplay = () => {
