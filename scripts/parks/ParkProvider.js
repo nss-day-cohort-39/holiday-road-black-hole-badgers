@@ -13,7 +13,7 @@ export const getParks = () => {
         .then(response => response.json())
         .then(
             parsedParks => {
-                parks = parsedParks.sort(function (Beginning, End) {
+                parks = parsedParks.sort((Beginning, End) => {
                     let nameA = Beginning.states
                     let nameB = End.states
                     if (nameA < nameB) {
