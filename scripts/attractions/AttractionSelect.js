@@ -11,7 +11,7 @@ contentTarget.addEventListener("change", changeEvent => {
         const attractionChosen = changeEvent.target.value
         const attractionChosenEvent = new CustomEvent ("attractionChosen", {
             detail: {
-                eatery: attractionChosen
+                attraction: attractionChosen
             }
         })
         eventHub.dispatchEvent(attractionChosenEvent)
@@ -29,7 +29,7 @@ const AttractionSelect = () => {
                 <option class="attractionOption" value="0">Please select an attraction!</option>
                 ${
                     attractionsCollection.map(singleAttraction => {
-                        return `<option>${singleAttraction.name}: ${singleAttraction.state}</option>`
+                        return `<option value="${singleAttraction.name}">${singleAttraction.name}: ${singleAttraction.state}</option>`
                     })
                 }
             </select>
