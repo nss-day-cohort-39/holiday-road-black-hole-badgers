@@ -6,7 +6,7 @@ import { getEateries } from "./eateries/EateryProvider.js"
 import { eaterySelect } from "./eateries/EaterySelect.js"
 import { getWeather, useWeather } from "./weather/WeatherProvider.js"
 import  "./eateries/EateryCard.js"
-import { WeatherList } from "./weather/WeatherList.js"
+import { FilterWeather } from "./weather/WeatherList.js"
 import "./attractions/AttractionCard.js"
 import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
 import "./parks/ParkCard.js"
@@ -22,6 +22,6 @@ getEateries()
     .then(eateryDialogButton)
 
 getWeather()
-    .then(WeatherList)
+    .then(FilterWeather)
 
 
