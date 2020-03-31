@@ -1,27 +1,29 @@
+// defining a function and this function will contain all our logic
+// pretaining to the eateryDetailDialogButton.
 export const eateryDialogButton = () => {
 
-    const allDialogs = document.querySelectorAll("button[id^='eateryDetailsButton--']")
-    const allCloseButtons = document.querySelectorAll(".button--close")
-    
-    for (const btn of allDialogs) {
-            btn.addEventListener("click", event => {
-                const dialogSelector = `#${event.target.id}+dialog`
-                const theDialog = document.querySelector(dialogSelector)
-                    theDialog.showModal()
-            }
-            )
-    }   
+// targeting a class/DOM node to respond our click event and put the HTML.
+    const contentTarget = document.querySelector(".itineraryEateryPreview")
 
-    for (const btn of allCloseButtons) {
-        btn.addEventListener(
-            "click",
-            theEvent => {
-                const dialogElement = theEvent.target.parentNode
-                dialogElement.close()
-            }
-        )
-    }
+// adding a click event to the contentTarget to display to DOM.
+    contentTarget.addEventListener("click", event => {
+// targeting a button with the matching ID that the user clicks.
+        if (event.target.id.startsWith("eateryDetailsButton--")){
+// display the dialog
+            const dialogSiblingSelector = `#${event.target.id}+dialog`
+// selection the variable that has our sibling selector functionality in it.
+            const theDialog = document.querySelector(dialogSiblingSelector)
+// then once clicked show the modal
+            theDialog.showModal()
+        }
+// targeting a close button
+        if (event.target.classList.contains("button--close")){
+// storing the target of the event in a variable.
+            const dialogElement = event.target.parentNode
+// close method on the dialog box
+            dialogElement.close()
+        }
+    })
 
-    
 }
 
