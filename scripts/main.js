@@ -10,14 +10,13 @@ import { FilterWeather } from "./weather/WeatherList.js"
 import "./attractions/AttractionCard.js"
 import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
 import "./parks/ParkCard.js"
-// import { parkDialogButton } from "./parks/ParkDetailDialog.js"
+import { attractionDialogButton } from "./attractions/AttractionDetailDialog.js"
 
 getAttractions()
     .then(AttractionSelect)
-
+    .then(attractionDialogButton)
 getParks()
     .then(parkSelect)
-    // .then(parkDialogButton)
 
 getEateries()
     .then(eaterySelect)

@@ -7,9 +7,11 @@ export const parkComponent = parkObject => {
             <dialog class="dialog--park" id="details--${parkObject.id}">
                 <ul>
                     <li>Overview: ${parkObject.description}</li>
-                    <li>${parkObject.contacts.phoneNumbers.phoneNumber}</li>
-                    <li>$${parkObject.entranceFees.cost}</li>
+                    <li>Phone Number: ${parkObject.contacts.phoneNumbers[0].phoneNumber}</li>
                 </ul>
+                <div class="parkImg">
+                    <img src="${parkObject.images[0].url}" alt="picture of ${parkObject.name}">
+                </div>
                 <button class="button--close">Close Park Details</button>
             </dialog>
         </article>
