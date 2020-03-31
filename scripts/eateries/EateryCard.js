@@ -19,7 +19,6 @@ eventHub.addEventListener("eateryChosen", event => {
 })
 
 
-
-const render = eatery => {
+const render = (eatery) => {
     contentTarget.innerHTML = eateryComponent(eatery)
 }

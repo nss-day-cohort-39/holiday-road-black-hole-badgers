@@ -12,12 +12,14 @@ import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
 import "./parks/ParkCard.js"
 import { attractionDialogButton } from "./attractions/AttractionDetailDialog.js"
 
+
 getAttractions()
     .then(AttractionSelect)
     .then(attractionDialogButton)
+
 getParks()
     .then(parkSelect)
-
+    
 getEateries()
     .then(eaterySelect)
     .then(eateryDialogButton)
