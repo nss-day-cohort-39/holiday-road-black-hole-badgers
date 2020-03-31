@@ -4,8 +4,10 @@
     text-align: center;
 }
 
-.weather__card {
-border: 1px solid gold;
-margin: .5rem .3rem;
+.weatherCard {
+border: 2px dotted goldenrod;
+background-color: lightblue;
+padding: .3rem;
 justify-content: space-evenly;
+margin: 0.5rem auto;
 }
