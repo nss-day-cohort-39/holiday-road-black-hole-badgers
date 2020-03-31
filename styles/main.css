@@ -1,2 +1,7 @@
 @import "./dropdowns.css";
 @import "./weather.css";
+
+img {
+    width: 20%;
+    height: 150px;
+}
