@@ -1,4 +1,4 @@
-import { getWeather, useWeather } from "./WeatherProvider.js"
+import { useWeather } from "./WeatherProvider.js"
 import { Weather } from "./Weather.js"
 
 const contentTarget = document.querySelector(".weather")
