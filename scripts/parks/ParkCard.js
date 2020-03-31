@@ -1,5 +1,6 @@
-import { parkComponent } from "./Park.js";
-import { useParks } from "./ParkProvider.js";
+import { parkComponent } from "./Park.js"
+import { useParks } from "./ParkProvider.js"
+import { parkDialogButton } from "./ParkDetailDialog.js"
 
 const contentTarget = document.querySelector(".itineraryParkPreview")
 const eventHub = document.querySelector(".container")
@@ -21,5 +22,6 @@ eventHub.addEventListener("parkChosen", event => {
 
 const render = (park) => {
     contentTarget.innerHTML = parkComponent(park)
+    parkDialogButton()
 }
 
