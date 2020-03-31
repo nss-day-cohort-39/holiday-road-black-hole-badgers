@@ -25,4 +25,6 @@ getEateries()
 getWeather()
     .then(FilterWeather)
 
+    
+
 
