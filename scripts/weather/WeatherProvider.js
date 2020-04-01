@@ -1,37 +1,25 @@
 import settings from "../../Settings.js"
-import { useParks } from "../parks/ParkProvider.js"
 
-//empty array that stores the weather, must be defined to store the data
+// Empty array that stores the weather, must be defined to store the data
 let weather = []
 const eventHub = document.querySelector(".container")
-// Allow other modules to get a copy of the weather data
 
-eventHub.addEventListener("parkChosen", event => {
-    const allParks = useParks()
-    const thePark = event.detail.park
-    const chosenPark = allParks.find(
-        (currentPark) => {
-            if (currentPark.name === thePark) {
-                return currentPark
-            }
-        }
-    )
-    const currentZip = chosenPark.addresses[0].postalCode
-    const useZip = () => {
-        return currentZip
-    }
-})
-spaghetti = useZip()
+// Let other modules know that the state of the weather has changed
+const dispatchStateChangeEvent = () => {
+    const weatherStateChangedEvent = new CustomEvent("weatherStateChanged")
 
-export const useWeather = () => {
-   return weather.slice()
+    eventHub.dispatchEvent(weatherStateChangedEvent)
 }
 
+// Allow other modules to get a copy of the weather data
 
-// Get weather data state from API
+export const useWeather = () => {
+    return weather.slice()
+ }
 
-export const getWeather = () => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=37643,us&units=imperial&appid=${settings.weatherKey}`)
+// Get weather data state from API, parameter is sent from the chosen park
+export const getWeather = (zipcode) => {
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},us&units=imperial&appid=${settings.weatherKey}`)
         .then(response => response.json())
         .then(
             parsedWeather => {
@@ -39,6 +27,7 @@ export const getWeather = () => {
 
             }
         )
+        .then(dispatchStateChangeEvent)
 }
 
 

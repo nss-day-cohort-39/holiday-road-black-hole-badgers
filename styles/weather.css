@@ -5,9 +5,9 @@
 }
 
 .weatherCard {
-border: 2px dotted goldenrod;
-background-color: lightblue;
-padding: .3rem;
-justify-content: space-evenly;
-margin: 0.5rem auto;
+    border: 2px dotted goldenrod;
+    background-color: lightblue;
+    padding: .3rem;
+    justify-content: space-evenly;
+    margin: 0.5rem auto;
 }
