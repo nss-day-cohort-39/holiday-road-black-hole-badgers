@@ -45,6 +45,7 @@ eventHub.addEventListener("parkChosen", event => {
         }
     )
     let currentZip = chosenPark.addresses[0].postalCode
-    getWeather(currentZip)
+    const [realZip, fakeZip] = currentZip.split("-")
+    getWeather(realZip)
 }
 )
