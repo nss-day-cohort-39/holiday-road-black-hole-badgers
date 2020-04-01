@@ -15,6 +15,7 @@ import { attractionDialogButton } from "./attractions/AttractionDetailDialog.js"
 getAttractions()
     .then(AttractionSelect)
     .then(attractionDialogButton)
+
 getParks()
     .then(parkSelect)
 
