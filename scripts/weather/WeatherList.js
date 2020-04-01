@@ -20,7 +20,7 @@ export const FilterWeather = () => {
       })
 
 // Render the weather objects
-export const render = weatherToRender => {
+ export const render = weatherToRender => {
     contentTarget.innerHTML = weatherToRender.map(
         (weatherObject) => {
             return Weather(weatherObject)
