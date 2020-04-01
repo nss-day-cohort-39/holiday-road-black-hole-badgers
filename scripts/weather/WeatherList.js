@@ -1,30 +1,30 @@
-import { useWeather } from "./WeatherProvider.js"
+import { useWeather, getWeather } from "./WeatherProvider.js"
 import { Weather } from "./Weather.js"
-
 const contentTarget = document.querySelector(".weather")
+const eventHub = document.querySelector(".container")
+
+let allParks = useWeather()
 
 export const FilterWeather = () => {
 
-    // Get the weather
-    let weatherToDisplay = useWeather()
-
-        // Filter the list of weather by selecting each day's data at 12 o'clock, results in 5 days
-        weatherToDisplay = weatherToDisplay.filter(weather => {
-            if (weather.dt_txt.includes("12:00:00")) {
-                return true
-            }
-            return false
-        })
-    render(weatherToDisplay)
-}
+    eventHub.addEventListener("parkChosen", event => {
+        for (let park of allParks) {
+          if (event.detail.park === parkObject.parkCode) {
+            console.log("in the if logic")
+            console.log(park.addresses)
+            getWeather(park).then(() => render(useWeather()))
+          }
+        }
+      })
 
 
 // Render the weather objects
 
-export const render = weatherToRender => {
-    contentTarget.innerHTML = weatherToRender.map(
-        (weatherObject) => {
-            return Weather(weatherObject)
+const render = weatherToRender => {
+    contentTarget.innerHTML = ""
+    for (let days of weatherToRender) {
+        if (weather.dt_txt.includes("12:00:00")) {
+            contentTarget.innerHTML += Weather(days)
+
         }
-        ).join("")
-    }
+    }}}
