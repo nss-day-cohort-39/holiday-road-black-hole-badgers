@@ -4,10 +4,10 @@ import { useParks } from "../parks/ParkProvider.js"
 import { useItinerary, getItineraries } from "./ItineraryProvider.js"
 import { Itinerary } from "./Itinerary.js"
 
-contentTarget = document.querySelector(".savedItineraries")
+const contentTarget = document.querySelector(".savedItineraries")
 const eventHub = document.querySelector(".container")
 
-const renderItinerary = () => {
+export const renderItinerary = () => {
 
     getItineraries().then(() => {
         //Stored the value of the arrays in variables
@@ -24,9 +24,5 @@ const renderItinerary = () => {
     }
         ).join("") //turning data into strings from objects
     })
-    
-    
 
-
-} 
-
+}

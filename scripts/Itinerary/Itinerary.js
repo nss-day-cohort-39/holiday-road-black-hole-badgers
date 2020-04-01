@@ -1,5 +1,5 @@
 //HTML representation of a single itineray
-export const Itinerary = (itineraryObject, parkObject, eateryObject, attractionObject) => {
+export const Itinerary = (parkObject, eateryObject, attractionObject) => {
   return `
     <article class="itineray">
         <section>${parkObject.name}</section>
