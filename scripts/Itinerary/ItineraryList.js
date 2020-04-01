@@ -12,6 +12,7 @@ export const renderItinerary = () => {
     getItineraries().then(() => {
         //Stored the value of the arrays in variables
         const itineraryArray = useItinerary()
+        
         const eateryArray = useEatery()
         const attractionArray = useAttractions()
         const parkArray = useParks()
@@ -24,5 +25,4 @@ export const renderItinerary = () => {
     }
         ).join("") //turning data into strings from objects
     })
-
 }

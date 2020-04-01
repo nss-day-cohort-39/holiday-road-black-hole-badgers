@@ -14,13 +14,13 @@ const dispatchStateChangeEvent = () => {
 }
 
 //Allow other modules to get a copy of the application state of the itinerary 
-export const useItinerary = () => itinerary.slice()
+export const useItinerary = () => itineraries.slice()
 
 /*
     Get the state of the itineraries from the API into the application
 */
 export const getItineraries = () => {
-    return fetch('http://localhost:8088/itineraries')
+    return fetch(`http://localhost:8088/itineraries`)
         .then(response => response.json())
         .then(parsedItineraries => {
             itineraries = parsedItineraries
@@ -29,7 +29,7 @@ export const getItineraries = () => {
 
 //deletes itineraries
 export const deleteItinerary = itineraryId => {
-    return fetch(`http://localhost:8088/itinareries/${itineraryId}`, {
+    return fetch(`http://localhost:8088/itineraries/${itineraryId}`, {
         method: "DELETE"
     })
         .then(getItineraries)
@@ -38,7 +38,7 @@ export const deleteItinerary = itineraryId => {
 
 //saves itineraries
 export const saveItinerary = itinerary => {
-    return fetch('http://localhost:8088/itineraries', {
+    return fetch(`http://localhost:8088/itineraries`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

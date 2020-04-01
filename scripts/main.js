@@ -11,6 +11,7 @@ import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
 import "./parks/ParkCard.js"
 import { attractionDialogButton } from "./attractions/AttractionDetailDialog.js"
 import { renderItinerary } from "./Itinerary/ItineraryList.js"
+import { getItineraries } from "./Itinerary/ItineraryProvider.js"
 
 getAttractions()
     .then(AttractionSelect)
