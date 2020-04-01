@@ -1,5 +1,6 @@
 @import "./dropdowns.css";
 @import "./weather.css";
+@import "./itineraryPreview.css";
 
 img {
     width: 20%;
