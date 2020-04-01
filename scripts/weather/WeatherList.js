@@ -5,22 +5,23 @@ import { useParks } from "../parks/ParkProvider.js"
 const contentTarget = document.querySelector(".weather")
 const eventHub = document.querySelector(".container")
 
-let allParks = useWeather()
-
 export const FilterWeather = () => {
 
-    eventHub.addEventListener("parkChosen", event => {
-        for (let park of allParks) {
-          if (event.detail.park === parkObject.parkCode) {
-            console.log("in the if logic")
-            console.log(park.addresses)
-            getWeather(park).then(() => render(useWeather()))
-          }
-        }
-      })
+    // Get the weather
+    let weatherToDisplay = useWeather()
+
+        // Filter the list of weather by selecting each day's data at 12 o'clock, results in 5 days
+        weatherToDisplay = weatherToDisplay.filter(weather => {
+            if (weather.dt_txt.includes("12:00:00")) {
+                return true
+            }
+            return false
+        })
+    render(weatherToDisplay)
+}
 
 // Render the weather objects
- export const render = weatherToRender => {
+export const render = weatherToRender => {
     contentTarget.innerHTML = weatherToRender.map(
         (weatherObject) => {
             return Weather(weatherObject)
@@ -47,4 +48,4 @@ eventHub.addEventListener("parkChosen", event => {
     const [realZip, fakeZip] = currentZip.split("-")
     getWeather(realZip)
 }
-)}
+)
