@@ -17,9 +17,12 @@ eventHub.addEventListener("parkChosen", event => {
         }
     )
     const currentZip = chosenPark.addresses[0].postalCode
+    const useZip = () => {
+        return currentZip
+    }
 })
+spaghetti = useZip()
 
-// addresses[0].postalCode
 export const useWeather = () => {
    return weather.slice()
 }
@@ -28,7 +31,7 @@ export const useWeather = () => {
 // Get weather data state from API
 
 export const getWeather = () => {
-    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${currentZip},us&units=imperial&appid=${settings.weatherKey}`)
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=37643,us&units=imperial&appid=${settings.weatherKey}`)
         .then(response => response.json())
         .then(
             parsedWeather => {
