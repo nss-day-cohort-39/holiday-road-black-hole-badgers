@@ -1,7 +1,6 @@
 import { parkComponent } from "./Park.js"
 import { useParks } from "./ParkProvider.js"
 import { parkDialogButton } from "./ParkDetailDialog.js"
-import { getWeather } from "../weather/WeatherProvider.js"
 
 const contentTarget = document.querySelector(".itineraryParkPreview")
 const eventHub = document.querySelector(".container")
