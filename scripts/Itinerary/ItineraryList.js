@@ -22,13 +22,36 @@ export const renderItinerary = () => {
             eatery => eatery.id === itineraryObject.eatery) 
             //Matching the selected eatery id from dropdown to its itinerary object id
         const chosenAttraction = attractionArray.find(
-            attraction => attraction.id === intineraryObject.attraction)
+            attraction => attraction.id === itineraryObject.attraction)
              //Matching the selected attraction id from dropdown to its itinerary object id
         const chosenPark = parkArray.find(
-            park => park.id === intineraryObject.park)
+            park => park.id === itineraryObject.park)
              //Matching the selected park id from dropdown to its itinerary object id 
-                return Itinerary(chosenEatery, chosenAttraction, chosenPark) //HTML representation once elements are selected from the dropdown and populated into itinerary
+                return Itinerary(chosenPark, chosenEatery, chosenAttraction) //HTML representation once elements are selected from the dropdown and populated into itinerary
     }
         ).join("") //turning data into strings from objects
     })
 }
+
+
+// const render = () => {
+
+//     getNotes().then(() => {
+//         const allTheNotes = useNotes()
+//         const allTheCriminals = useCriminals()
+
+//         contentTarget.innerHTML = allTheNotes.map(
+//             currentNoteObject => {
+
+//                 // Find the criminal for the current note
+//                 const theFoundCriminal = allTheCriminals.find(
+//                     (currentCriminalObject) => {
+//                         return currentNoteObject.criminal === currentCriminalObject.id
+//                     }
+//                 )
+
+//                 return Note(currentNoteObject, theFoundCriminal)
+//             }
+//         ).join("")
+//     })
+// }
