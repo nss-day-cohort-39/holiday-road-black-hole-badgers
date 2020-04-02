@@ -1,3 +1,10 @@
 {
-  "itineraries": []
+  "itineraries": [
+    {
+      "park": "E98D419A-A118-49D5-89AF-3C4F9BE7372D",
+      "attraction": 9,
+      "eatery": 6,
+      "id": 1
+    }
+  ]
 }

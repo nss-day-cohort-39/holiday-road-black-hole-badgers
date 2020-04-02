@@ -21,13 +21,16 @@ export const eaterySelect = () => {
 
   const render = (eateriesCollection) => {
     contentTarget.innerHTML = `
-        <select class="eateryDropdown" id="eaterySelect">
-        <option value="0">Please select a eatery!</option>
+    <div class="dropdownContainer">
+        <select class="dropdown" id="eaterySelect">
+        <div class="dropdown-content">
+        <option value="0">Please select an eatery!</option>
         ${eateriesCollection.map(singleEatery => {
           return `<option value="${singleEatery.id}">${singleEatery.businessName}: ${singleEatery.state}</option>`
         })
-    }
+    }   </div>
         </select>
+        </div>
         `
   }
     render(allEateries)

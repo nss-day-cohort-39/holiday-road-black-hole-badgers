@@ -25,14 +25,17 @@ const AttractionSelect = () => {
 
     const render = (attractionsCollection) => {
         contentTarget.innerHTML = `
+        <div class="dropdownContainer">
             <select class="dropdown" id="attractionSelect">
+            <div class="dropdown-content">
                 <option class="attractionOption" value="0">Please select an attraction!</option>
                 ${
                     attractionsCollection.map(singleAttraction => {
                         return `<option value="${singleAttraction.id}">${singleAttraction.name}: ${singleAttraction.state}</option>`
                     })
-                }
+                }</div>
             </select>
+            </div>
         `
     }
     render(attractions)
