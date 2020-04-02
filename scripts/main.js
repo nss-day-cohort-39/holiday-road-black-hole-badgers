@@ -9,7 +9,6 @@ import "./weather/WeatherList.js"
 import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
 import { attractionDialogButton } from "./attractions/AttractionDetailDialog.js"
 import { renderItinerary } from "./Itinerary/ItineraryList.js"
-import { getItineraries } from "./Itinerary/ItineraryProvider.js"
 import { displayItineraryButton } from "./ItineraryPreview/SavedItineraryButton.js"
 
 getAttractions()

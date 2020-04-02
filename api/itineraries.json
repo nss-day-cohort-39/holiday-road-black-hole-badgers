@@ -1,18 +1,34 @@
 {
-	"itineraries": [
-		{
-			"id": 1,
-			"eatery": "El Charro Cafe",
-			"attraction": "First Kiss Spot of the Obamas",
-			"park": "Yellowstone National Park"
-		},
-		{
-			"id": 2,
-			"eatery": "test eatery",
-			"attraction": "test attraction",
-			"park": "testing Park"
-		}
-	]
+  "itineraries": [
+    {
+      "park": "Fort Bowie",
+      "attraction": "White House Replica",
+      "eatery": "Buckhorn Exchange",
+      "id": 1
+    },
+    {
+      "park": "Fort Bowie",
+      "attraction": "White House Replica",
+      "eatery": "Buckhorn Exchange",
+      "id": 2
+    },
+    {
+      "park": "Fort Bowie",
+      "attraction": "Snake World",
+      "eatery": "The Old Clam House",
+      "id": 3
+    },
+    {
+      "park": "Grand Canyon",
+      "attraction": "Cabazon Dinosaurs",
+      "eatery": "Northwestern Steakhouse",
+      "id": 4
+    },
+    {
+      "park": "Hubbell Trading Post",
+      "attraction": "Fountain of Youth",
+      "eatery": "The Old Clam House",
+      "id": 5
+    }
+  ]
 }
-
-
