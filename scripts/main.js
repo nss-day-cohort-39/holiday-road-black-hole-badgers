@@ -17,6 +17,7 @@ getAttractions()
 
 getParks()
     .then(parkSelect)
+    .then(renderItinerary)
     
 getEateries()
     .then(eaterySelect)

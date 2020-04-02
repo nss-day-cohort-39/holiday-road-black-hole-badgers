@@ -8,7 +8,7 @@ contentTarget.addEventListener("click", clickEvent => { //listen for the browser
         const attractionChosen = document.querySelector("#attractionSelect").value //^
         const eateryChosen = document.querySelector("#eaterySelect").value //^
 
-        // Factory function to generate the object that will be saved
+        //Generate the object that will be saved
         const newItinerary = {
             park: parkChosen,
             attraction: attractionChosen,
