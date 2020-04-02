@@ -1,10 +1,18 @@
 import { useEatery } from "../eateries/EateryProvider.js"
 import { useAttractions } from "../attractions/AttractionProvider.js"
 import { useParks } from "../parks/ParkProvider.js"
-import { useItinerary, getItineraries } from "./ItineraryProvider.js"
+import { useItinerary, getItineraries, deleteItinerary } from "./ItineraryProvider.js"
 import { Itinerary } from "./Itinerary.js"
 
 const contentTarget = document.querySelector(".savedItineraries")
+
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteItinerary--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        deleteItinerary(id).then(renderItinerary)
+    }
+})
 
 export const renderItinerary = () => {
 
@@ -27,9 +35,10 @@ export const renderItinerary = () => {
         const chosenPark = parkArray.find(
             park => park.id === itineraryObject.park)
              //Matching the selected park id from dropdown to its itinerary object id 
-                return Itinerary(chosenPark, chosenEatery, chosenAttraction) //HTML representation once elements are selected from the dropdown and populated into itinerary
+                return Itinerary(itineraryObject, chosenPark, chosenEatery, chosenAttraction) //HTML representation once elements are selected from the dropdown and populated into itinerary
     }
         ).join("") //turning data into strings from objects
     })
 }
+
 
