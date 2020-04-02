@@ -11,8 +11,8 @@ contentTarget.addEventListener("click", clickEvent => { //listen for the browser
         //Generate the object that will be saved
         const newItinerary = {
             park: parkChosen,
-            attraction: attractionChosen,
-            eatery: eateryChosen
+            attraction: parseInt(attractionChosen),
+            eatery: parseInt(eateryChosen)
         }
         saveItinerary(newItinerary) //Sending the newItinerary object via the "Post" method function defined by saveItinerary to itineraries.JSON
     }
