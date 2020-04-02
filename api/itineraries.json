@@ -1,9 +1,15 @@
 {
   "itineraries": [
     {
+<<<<<<< HEAD
       "park": "E98D419A-A118-49D5-89AF-3C4F9BE7372D",
       "attraction": 9,
       "eatery": 6,
+=======
+      "park": "7F402367-BA37-4B9B-85BD-05A7679CD449",
+      "attraction": 7,
+      "eatery": 11,
+>>>>>>> master
       "id": 1
     }
   ]
