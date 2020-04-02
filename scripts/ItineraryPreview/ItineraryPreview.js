@@ -15,7 +15,7 @@ eventHub.addEventListener("eateryChosen", event => {
     const theEatery = event.detail.eatery
     const chosenEatery = allEateries.find(
         (currentEatery) => {
-            if (currentEatery.businessName === theEatery) {
+            if (currentEatery.id === parseInt(theEatery)) {
                 return currentEatery
             }
         }
@@ -23,7 +23,7 @@ eventHub.addEventListener("eateryChosen", event => {
     eateryRender(chosenEatery)
 })
 
-const eateryRender = (eatery) => {
+const eateryRender = eatery => {
     contentTargetEatery.innerHTML = eateryComponent(eatery)
 }
 
@@ -36,7 +36,7 @@ eventHub.addEventListener("attractionChosen", event => {
     const theChosenAttraction = event.detail.attraction
     const displayedAttraction = allAttractions.find(
         (currentAttraction) => {
-            if (currentAttraction.name === theChosenAttraction) {
+            if (currentAttraction.id === parseInt(theChosenAttraction)) {
                 return currentAttraction
             }
         }
@@ -58,7 +58,7 @@ eventHub.addEventListener("parkChosen", event => {
     const thePark = event.detail.park
     const chosenPark = allParks.find(
         (currentPark) => {
-            if (currentPark.name === thePark) {
+            if (currentPark.id === thePark) {
                 return currentPark
             }
         }

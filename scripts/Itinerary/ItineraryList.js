@@ -5,6 +5,12 @@ import { useItinerary, getItineraries, deleteItinerary } from "./ItineraryProvid
 import { Itinerary } from "./Itinerary.js"
 
 const contentTarget = document.querySelector(".savedItineraries")
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("itineraryStateChanged", customEvent => {
+
+    renderItinerary()
+})
 
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteItinerary--")) {
