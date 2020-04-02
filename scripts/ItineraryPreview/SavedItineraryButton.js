@@ -1,21 +1,24 @@
-const contentTarget = document.querySelector(".saveItineraryButton") //where the button will be displayed
-const eventHub = document.querySelector(".container") //where all the things happen 
+import { saveItinerary } from "../Itinerary/ItineraryProvider.js"
 
+const contentTarget = document.querySelector(".saveItineraryButton") //where the button will be displayed
 
 contentTarget.addEventListener("click", clickEvent => { //listen for the browser generated click event
     if (clickEvent.target.id === "saveItinerary") { //make sure you are only listening for the specific show all itineries button click . 
-        //The clickevent.target.id is coming from the id of the show all itineries button
-        // Create a custom event to tell any interested component that the user wants to see itineries
-        const saveItineraryEvent = new CustomEvent("itinerarySaved") //new custom event that is showing there is a new event that itineray button was clicked
-            //just letting the system know that the button was clicked
-        // Dispatch it to event hub
+        const parkChosen = document.querySelector("#parkSelect").value//grabbing the value of the selected option from the dropdown with the id of parkSelect
+        const attractionChosen = document.querySelector("#attractionSelect").value //^
+        const eateryChosen = document.querySelector("#eaterySelect").value //^
 
-
-        eventHub.dispatchEvent(saveItineraryEvent) //dispatching the new custom event to the event hub with the title of saveItineraryEvent
+        //Generate the object that will be saved
+        const newItinerary = {
+            park: parkChosen,
+            attraction: parseInt(attractionChosen),
+            eatery: parseInt(eateryChosen)
+        }
+        saveItinerary(newItinerary) //Sending the newItinerary object via the "Post" method function defined by saveItinerary to itineraries.JSON
     }
 })
+
 
 export const displayItineraryButton = () => { //the HTML representation of the itinerary button that will be displayed in the DOM
     contentTarget.innerHTML = "<button id='saveItinerary'>Save Itinerary</button>"
 }
-

@@ -24,7 +24,7 @@ export const getWeather = (zipcode) => {
         .then(
             parsedWeather => {
                 weather = parsedWeather.list
-
+                
             }
         )
         .then(dispatchStateChangeEvent)

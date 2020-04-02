@@ -29,7 +29,7 @@ export const parkSelect = () => {
         <select class="parkDropdown" id="parkSelect">
         <option value="0">Please select a park!</option>
         ${parksCollection.map(singlePark => {
-          return `<option value="${singlePark.name}">${singlePark.name}: ${singlePark.states}</option>`
+          return `<option value="${singlePark.id}">${singlePark.name}: ${singlePark.states}</option>`
         })
     }
         </select>
