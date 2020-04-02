@@ -39,7 +39,7 @@ eventHub.addEventListener("parkChosen", event => {
     const thePark = event.detail.park
     const chosenPark = allParks.find(
         (currentPark) => {
-            if (currentPark.name === thePark) {
+            if (currentPark.id === thePark) {
                 return currentPark
             }
         }
