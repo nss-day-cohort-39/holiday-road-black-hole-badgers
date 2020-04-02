@@ -1,34 +1,11 @@
 {
   "itineraries": [
     {
-      "park": "Fort Bowie",
-      "attraction": "White House Replica",
-      "eatery": "Buckhorn Exchange",
+      "park": "C08AD828-98FF-478E-A63C-614E7534274B",
+      "attraction": 3,
+      "eatery": 7,
       "id": 1
-    },
-    {
-      "park": "Fort Bowie",
-      "attraction": "White House Replica",
-      "eatery": "Buckhorn Exchange",
-      "id": 2
-    },
-    {
-      "park": "Fort Bowie",
-      "attraction": "Snake World",
-      "eatery": "The Old Clam House",
-      "id": 3
-    },
-    {
-      "park": "Grand Canyon",
-      "attraction": "Cabazon Dinosaurs",
-      "eatery": "Northwestern Steakhouse",
-      "id": 4
-    },
-    {
-      "park": "Hubbell Trading Post",
-      "attraction": "Fountain of Youth",
-      "eatery": "The Old Clam House",
-      "id": 5
+  
     }
   ]
 }
