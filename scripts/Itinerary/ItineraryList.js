@@ -5,6 +5,12 @@ import { useItinerary, getItineraries } from "./ItineraryProvider.js"
 import { Itinerary } from "./Itinerary.js"
 
 const contentTarget = document.querySelector(".savedItineraries")
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("itineraryStateChanged", customEvent => {
+
+    renderItinerary()
+})
 
 export const renderItinerary = () => {
 

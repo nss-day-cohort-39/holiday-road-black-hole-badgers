@@ -29,7 +29,7 @@ const AttractionSelect = () => {
                 <option class="attractionOption" value="0">Please select an attraction!</option>
                 ${
                     attractionsCollection.map(singleAttraction => {
-                        return `<option value="${singleAttraction.name}">${singleAttraction.name}: ${singleAttraction.state}</option>`
+                        return `<option value="${singleAttraction.id}">${singleAttraction.name}: ${singleAttraction.state}</option>`
                     })
                 }
             </select>

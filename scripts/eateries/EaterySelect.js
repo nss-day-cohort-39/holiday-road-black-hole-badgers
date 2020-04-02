@@ -24,7 +24,7 @@ export const eaterySelect = () => {
         <select class="eateryDropdown" id="eaterySelect">
         <option value="0">Please select a eatery!</option>
         ${eateriesCollection.map(singleEatery => {
-          return `<option value="${singleEatery.businessName}">${singleEatery.businessName}: ${singleEatery.state}</option>`
+          return `<option value="${singleEatery.id}">${singleEatery.businessName}: ${singleEatery.state}</option>`
         })
     }
         </select>
