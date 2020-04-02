@@ -1,8 +1,13 @@
 @import "./dropdowns.css";
 @import "./weather.css";
 @import "./itineraryPreview.css";
+@import "./savedItinerary.css";
 
 img {
     width: 20%;
     height: 150px;
+}
+
+body {
+    background-color:rgb(236, 236, 255);
 }

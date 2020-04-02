@@ -2,11 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+    background-color: rgb(125, 140, 228);
+    border-radius: 1rem;
+    margin: 1rem 1rem 0rem 1rem;
 }
 
 .weatherCard {
-    border: 2px dotted goldenrod;
-    background-color: lightblue;
+    background-color: rgb(236, 236, 255);
+    border-radius: .5rem;
     padding: .3rem;
     justify-content: space-evenly;
     margin: 1rem auto;
