@@ -29,6 +29,30 @@
       "attraction": "Fountain of Youth",
       "eatery": "The Old Clam House",
       "id": 5
+    },
+    {
+      "park": "Hohokam Pima",
+      "attraction": "Cabazon Dinosaurs",
+      "eatery": "Louis' Lunch",
+      "id": 6
+    },
+    {
+      "park": "Chiricahua",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "Buckhorn Exchange",
+      "id": 7
+    },
+    {
+      "park": "Chiricahua",
+      "attraction": "Owney the Stuffed Dog Postal Mascot",
+      "eatery": "Buckhorn Exchange",
+      "id": 8
+    },
+    {
+      "park": "Grand Canyon",
+      "attraction": "Avery’s Beverages",
+      "eatery": "McClard's BBQ",
+      "id": 9
     }
   ]
 }
