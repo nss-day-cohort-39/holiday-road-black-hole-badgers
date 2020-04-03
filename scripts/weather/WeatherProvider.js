@@ -5,6 +5,7 @@ let weather = []
 const eventHub = document.querySelector(".container")
 
 // Let other modules know that the state of the weather has changed
+//defining the dispatch change event for WeatherList
 const dispatchStateChangeEvent = () => {
     const weatherStateChangedEvent = new CustomEvent("weatherStateChanged")
 

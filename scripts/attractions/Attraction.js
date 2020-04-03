@@ -1,3 +1,4 @@
+//HTML representation of a single attraction 
 export const attractionComponent = attractionObject => {
     return `
         <article class="attractionList">
@@ -17,3 +18,5 @@ export const attractionComponent = attractionObject => {
             </article>
     `
 }
+
+//line 11 & 12 are ternary operaters providing values based on booleans that are inside of the API
