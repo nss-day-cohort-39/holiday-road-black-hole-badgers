@@ -1,7 +1,10 @@
+/* Saved itinerary container */
 .savedItineraries {
     margin: 2rem auto;
+    flex-basis: 20%;
 }
 
+/* Saved itinerary cards */
 .itineray {
     border: .3rem solid rgb(125, 140, 228);
     background-color: rgb(236, 236, 255);
