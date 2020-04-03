@@ -2,9 +2,10 @@
 export const Itinerary = (itineraryObject, parkObject, eateryObject, attractionObject) => {
   return `
   <article class="itineray">
-  <section>${parkObject.name}</section>
-  <section>${eateryObject.businessName}</section>
-  <section>${attractionObject.name}</section>
+  <h3>Saved Itinerary</h3>
+  <section>Park: ${parkObject.name}</section>
+  <section>Eatery: ${eateryObject.businessName}</section>
+  <section>Attraction: ${attractionObject.name}</section>
   <button id="deleteItinerary--${itineraryObject.id}">Delete</button>
 </article>
 
