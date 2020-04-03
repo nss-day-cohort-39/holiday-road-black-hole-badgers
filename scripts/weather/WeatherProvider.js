@@ -17,7 +17,7 @@ export const useWeather = () => {
     return weather.slice()
  }
 
-// Get weather data state from API, parameter is sent from the chosen park
+// Get weather data state from API, parameter is sent from the chosen park in WeatherList
 export const getWeather = (zipcode) => {
     return fetch(`https://api.openweathermap.org/data/2.5/forecast?zip=${zipcode},us&units=imperial&appid=${settings.weatherKey}`)
         .then(response => response.json())
