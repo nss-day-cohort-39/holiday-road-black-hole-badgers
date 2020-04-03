@@ -5,6 +5,18 @@
       "attraction": 9,
       "eatery": 6,
       "id": 1
+    },
+    {
+      "park": "0",
+      "attraction": 0,
+      "eatery": 0,
+      "id": 2
+    },
+    {
+      "park": "0",
+      "attraction": 0,
+      "eatery": 0,
+      "id": 3
     }
   ]
 }
