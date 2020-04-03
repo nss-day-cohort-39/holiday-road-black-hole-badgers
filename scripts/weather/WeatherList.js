@@ -19,21 +19,26 @@ export const FilterWeather = () => {
         })
     render(weatherDisplayed)
 }
-
+// 3
 // Render the weather objects
-export const render = weatherToRender => {
+export const render = (weatherToRender) => {
+
+    //for every individual weather object return a HTML representation of  object
     contentTarget.innerHTML = weatherToRender.map(
         (weatherObject) => {
             return Weather(weatherObject)
         }
         ).join("")
     }
-    // Listen for changes to the weather state
+    
+    // Listen for changes to the weather state / whenever someone changes the park the 5 day forecast
+    // renders and changes based on location
+
     eventHub.addEventListener("weatherStateChanged", customEvent => {
     FilterWeather()
 })
-
-// Listen for the park state to be changed, shout the zip of the chosen park to other modules
+// 1
+// Listen for the park state to be changed, shout the zip of the chosen park to other modules 
 eventHub.addEventListener("parkChosen", event => {
     const allParks = useParks()
     const thePark = event.detail.park
@@ -44,6 +49,7 @@ eventHub.addEventListener("parkChosen", event => {
             }
         }
     )
+    //splits the zip on the - to remove the extra four digits from the zip
     let currentZip = chosenPark.addresses[0].postalCode
     const [realZip, fakeZip] = currentZip.split("-")
     getWeather(realZip)
