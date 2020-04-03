@@ -17,10 +17,11 @@
     background-color:rgb(236, 236, 255);
     min-width: 8rem;
     min-height: 6rem;
-    padding: 2rem;
+    padding: 1.5rem;
     margin: 1rem 0rem;
     border-radius: 2rem;
     flex-basis: 20%;
+    text-align: center;
 }
 
 .previewCard h3 {
