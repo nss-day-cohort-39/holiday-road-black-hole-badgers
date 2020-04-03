@@ -1,3 +1,5 @@
+
+
 export const attractionDialogButton = () => {
     
     const contentTarget = document.querySelector(".itineraryAttractionPreview")
