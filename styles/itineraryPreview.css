@@ -9,19 +9,20 @@
     justify-content: space-around;
     background-color:rgb(125, 140, 228);
     border-radius: 1rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
     flex-basis: 66%;
 }
 
 .previewCard {
     background-color:rgb(236, 236, 255);
-    min-width: 8rem;
+    min-width: 10rem;
     min-height: 6rem;
-    padding: 1.5rem;
+    padding: 1.8rem;
     margin: 1rem 0rem;
     border-radius: 2rem;
     flex-basis: 20%;
     text-align: center;
+    align-self: center;
 }
 
 .previewCard h3 {

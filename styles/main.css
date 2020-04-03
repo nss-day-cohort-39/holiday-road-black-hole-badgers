@@ -2,6 +2,7 @@
 @import "./weather.css";
 @import "./itineraryPreview.css";
 @import "./savedItinerary.css";
+@import "./header.css";
 
 img {
     width: 20%;

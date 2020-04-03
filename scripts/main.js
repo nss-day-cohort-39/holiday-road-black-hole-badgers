@@ -10,6 +10,9 @@ import { eateryDialogButton } from "./eateries/EateryDetailDialog.js"
 import { attractionDialogButton } from "./attractions/AttractionDetailDialog.js"
 import { renderItinerary } from "./Itinerary/ItineraryList.js"
 import { displayItineraryButton } from "./ItineraryPreview/SavedItineraryButton.js"
+import { headerRender } from "./header/Header.js"
+
+headerRender()
 
 getAttractions()
     .then(AttractionSelect)
