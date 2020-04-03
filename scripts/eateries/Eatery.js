@@ -7,7 +7,7 @@ export const eateryComponent = eateryObj => {
             <dialog class="dialog--eatery" id="details--${eateryObj.id}">
                 <ul>
                     <li>Overview: ${eateryObj.description}</li>
-                    <li>${eateryObj.ameneties.petFriendly?"Bring all the fluffsters!!":"Pets are not allowed"}</li>
+                    <li>${eateryObj.ameneties.petFriendly?"Pets are allowed. Bring all the fluffsters!!":"Pets are not allowed."}</li>
                     <li>${eateryObj.ameneties.wifi?"We have free WiFi!!":"Sorry, no WiFi!"}</li>
                     <li>${eateryObj.ameneties.restrooms?"Restrooms are available":"Restrooms are not available"}</li>
                 </ul>
