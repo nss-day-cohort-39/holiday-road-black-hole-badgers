@@ -1,3 +1,4 @@
+//HTML representation of a single park
 export const parkComponent = parkObject => {
     return `
         <article class="parkList">

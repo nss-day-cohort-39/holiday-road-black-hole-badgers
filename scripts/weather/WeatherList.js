@@ -4,20 +4,20 @@ import { useParks } from "../parks/ParkProvider.js"
 
 const contentTarget = document.querySelector(".weather")
 const eventHub = document.querySelector(".container")
-
+//FilterWeather is a function that holds the filtered weather logic within
 export const FilterWeather = () => {
 
-    // Get the weather
+    // Get the weather and store it in a variable
     let weatherToDisplay = useWeather()
 
-        // Filter the list of weather by selecting each day's data at 12 o'clock, results in 5 days
-        weatherToDisplay = weatherToDisplay.filter(weather => {
+        // Filter the list of weather by selecting each day's data at 12 o'clock, results in 5 day forecast
+       const weatherDisplayed = weatherToDisplay.filter(weather => {
             if (weather.dt_txt.includes("12:00:00")) {
                 return true
             }
             return false
         })
-    render(weatherToDisplay)
+    render(weatherDisplayed)
 }
 
 // Render the weather objects
