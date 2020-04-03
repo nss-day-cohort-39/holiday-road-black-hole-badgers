@@ -6,7 +6,7 @@ export const Itinerary = (itineraryObject, parkObject, eateryObject, attractionO
   <section>Park: ${parkObject.name}</section>
   <section>Eatery: ${eateryObject.businessName}</section>
   <section>Attraction: ${attractionObject.name}</section>
-  <button id="deleteItinerary--${itineraryObject.id}">Delete</button>
+  <button class="deleteButton" id="deleteItinerary--${itineraryObject.id}">Delete 🤢</button>
 </article>
 
     `

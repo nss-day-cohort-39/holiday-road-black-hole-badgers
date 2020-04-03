@@ -7,6 +7,6 @@ const Header = () => {
 
 const contentTargetEatery = document.querySelector(".header")
 
-export const headerRender = eatery => {
+export const headerRender = () => {
     contentTargetEatery.innerHTML = Header()
 }
