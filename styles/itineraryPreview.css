@@ -9,7 +9,7 @@
 /* Whole preview container */
 .itineraryPreview {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
     background-color:rgb(125, 140, 228);
     border-radius: 1rem;
@@ -35,13 +35,90 @@
     align-self: center;
     text-align:center;
 }
-
-/* Save itinerary button itself */
 #saveItinerary {
-    padding: 3rem 0.65rem;
+    display: inline-block;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    transition: all 0.9s;
     border-radius: 1rem;
-}
+    padding: 3rem 0.65rem;
+    }
+    
+    #saveItinerary:hover{
+    color:#000000;
+    background-color:rgb(76, 92, 180);
+    }
+    @media all and (max-width:30em){
+    #saveItineray{
+    display:block;
+    margin:0.4em auto;
+    }
+    }
+    .detailsButton {
+        border: none;
+        background: #404040;
+        color: #ffffff !important;
+        font-weight: 100;
+        padding: 6px;
+        text-transform: uppercase;
+        border-radius: 6px;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+        }
+        .detailsButton:hover {
+            color: #404040 !important;
+            font-weight: 700 !important;
+            letter-spacing: 2px;
+            background: none;
+            transition: all 0.3s ease 0s;
+            }
+    
+
+.attractionButton {
+    border: none;
+    background: #404040;
+    color: #ffffff !important;
+    font-weight: 100;
+    padding: 6px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    }
+    .attractionButton:hover {
+        color: #404040 !important;
+        font-weight: 700 !important;
+        letter-spacing: 2px;
+        background: none;
+        transition: all 0.3s ease 0s;
+        }
+
+.deleteButton {
+    border: none;
+    color: red !important;
+    font-weight: 200;
+    padding: 6px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    }
+    .deleteButton:hover {
+        color: red !important;
+        font-weight: 1400 !important;
+        letter-spacing: 2px;
+        background: none;
+        transition: all 0.3s ease 0s;
+        }
 
 .previewCard h3 {
     margin-bottom: 0rem;
 }
+
